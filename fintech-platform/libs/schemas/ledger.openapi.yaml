@@ -1,0 +1,9 @@
+openapi: 3.0.3
+info: { title: Ledger API, version: 0.1.0 }
+paths:
+  /health:
+    get: { responses: { '200': { description: OK } } }
+  /v1/postings:
+    post:
+      summary: Create double-entry posting
+      responses: { '201': { description: Created } }

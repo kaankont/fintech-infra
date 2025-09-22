@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: issuer-gateway }
+spec:
+  replicas: 2
+  selector: { matchLabels: { app: issuer-gateway } }
+  template:
+    metadata: { labels: { app: issuer-gateway } }
+    spec:
+      containers:
+        - name: app
+          image: ghcr.io/ORG/REPO/issuer-gateway:sha-REV
+          ports: [{ containerPort: 8080 }]
+          env:
+            - { name: PORT, value: "8080" }

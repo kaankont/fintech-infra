@@ -1,0 +1,1 @@
+node_modules\n.next\n.env*\n**/.env*\n.DS_Store\n/tmp\n/vendor\n/dist\n/build\n/.idea\n/.vscode\n/bin\n/coverage\n*.log\n**/terraform.tfstate*\n**/.terraform\n**/.terraform.lock.hcl\n

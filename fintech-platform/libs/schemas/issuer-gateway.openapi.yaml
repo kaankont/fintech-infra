@@ -1,0 +1,24 @@
+openapi: 3.0.3
+info:
+  title: Issuer Gateway API
+  version: 0.1.0
+paths:
+  /health:
+    get:
+      summary: Liveness check
+      responses:
+        '200': { description: OK }
+  /v1/cards:
+    post:
+      summary: Issue a new card
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id: { type: string }
+                product_id: { type: string }
+      responses:
+        '201': { description: Created }
